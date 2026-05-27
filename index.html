@@ -18,41 +18,33 @@
         [data-theme="mono"]{--accent:#e5e5e5;--accent-hover:#ffffff;--accent-dark:rgba(229,229,229,.12);--bg:#0a0a0a;--bg2:#111111;--bg3:#1a1a1a;--border:#252525;--text:#fff;--text2:#888;--text3:#444}
         body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background .3s,color .3s}
         ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
-
         .header{position:fixed;top:0;left:0;right:0;height:56px;background:rgba(13,13,13,.95);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 20px;z-index:1000}
         .logo{display:flex;align-items:center;gap:8px;cursor:pointer}.logo-box{width:32px;height:32px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--bg)}
         .logo span{font-size:18px;font-weight:800}.logo .site-name{color:var(--accent);font-style:normal;font-weight:800}
         .header-actions{display:flex;gap:8px;align-items:center}
-
-        .sync-indicator{font-size:10px;padding:4px 8px;border-radius:4px;font-weight:600;display:flex;align-items:center;gap:4px}
+        .sync-indicator{font-size:10px;padding:4px 8px;border-radius:4px;font-weight:600;display:flex;align-items:center;gap:4px;cursor:pointer}
         .sync-ok{background:rgba(34,197,94,.15);color:#22c55e}
         .sync-off{background:rgba(229,9,20,.15);color:#e50914}
         .sync-load{background:rgba(234,179,8,.15);color:var(--accent)}
         .sync-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
-
         .theme-selector{position:relative}
         .theme-btn{width:32px;height:32px;border-radius:50%;border:2px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;background:var(--bg3);transition:all .2s}
-        .theme-btn:hover{border-color:var(--accent)}
-        .theme-btn i{font-size:14px;color:var(--text2)}
+        .theme-btn:hover{border-color:var(--accent)}.theme-btn i{font-size:14px;color:var(--text2)}
         .theme-dropdown{position:absolute;top:100%;right:0;margin-top:8px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:8px;display:none;z-index:100;min-width:170px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
         .theme-dropdown.show{display:block}
         .theme-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;cursor:pointer;transition:background .15s}
         .theme-opt:hover{background:var(--bg3)}.theme-opt.active{background:var(--accent-dark)}
         .theme-dot{width:18px;height:18px;border-radius:50%;border:2px solid var(--border);flex-shrink:0}
         .theme-opt span{font-size:12px;font-weight:500;color:var(--text2)}.theme-opt.active span{color:var(--text)}
-
         .btn{padding:7px 14px;border:none;border-radius:6px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .2s}
         .btn-accent{background:var(--accent);color:var(--bg)}.btn-accent:hover{opacity:.85}
         .btn-ghost{background:var(--bg3);color:var(--text2);border:1px solid var(--border)}.btn-ghost:hover{background:var(--border);color:var(--text)}
         .btn-purple{background:#8b5cf6;color:#fff}.btn-purple:hover{background:#7c3aed}
-        .btn-green{background:#22c55e;color:#fff}.btn-green:hover{background:#16a34a}
         .btn-sm{padding:5px 10px;font-size:11px}
-
         .main{margin-top:56px;padding:20px;max-width:1400px;margin-left:auto;margin-right:auto}
         .tabs{display:flex;gap:6px;margin-bottom:20px;overflow-x:auto;padding-bottom:4px}
         .tab{padding:6px 14px;background:var(--bg3);border:1px solid var(--border);border-radius:16px;color:var(--text2);font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;font-family:'Inter',sans-serif;transition:all .2s}
         .tab:hover{background:var(--border);color:var(--text)}.tab.active{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-
         .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
         .card{background:var(--bg2);border-radius:10px;overflow:hidden;cursor:pointer;transition:all .25s;border:1px solid transparent}
         .card:hover{transform:translateY(-3px);border-color:var(--border);box-shadow:0 8px 24px rgba(0,0,0,.5)}
@@ -70,7 +62,6 @@
         .card-title{font-size:13px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:4px}
         .card-author{font-size:11px;color:var(--text3);margin-bottom:4px}
         .card-meta{font-size:10px;color:var(--text3);display:flex;align-items:center;gap:6px}
-
         .reader-wrap{display:none}.reader-wrap.show{display:block}
         .reader-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;margin-bottom:16px;flex-wrap:wrap;gap:8px}
         .reader-head h2{font-size:16px;font-weight:700}
@@ -86,10 +77,8 @@
         .related-cover img{width:100%;height:100%;object-fit:cover}
         .related-info{flex:1}.related-info h4{font-size:12px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
         .related-info p{font-size:10px;color:var(--text3);margin-top:2px}
-
         .back-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:none;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;padding:6px 0;margin-bottom:12px;font-family:'Inter',sans-serif}
         .back-btn:hover{color:var(--text)}
-
         .overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;display:none;align-items:center;justify-content:center;padding:16px}
         .overlay.show{display:flex}
         .modal{background:var(--bg2);border:1px solid var(--border);border-radius:12px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;animation:popIn .2s ease}
@@ -101,18 +90,15 @@
         .field input,.field select{width:100%;padding:10px 12px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;font-family:'Inter',sans-serif;outline:none;transition:border .2s}
         .field input:focus,.field select:focus{border-color:var(--accent)}
         .hint{font-size:10px;color:var(--text3);margin-top:4px}
-
         .src-opts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:16px}
         .src-opt{padding:10px;background:var(--bg3);border:2px solid var(--border);border-radius:8px;text-align:center;cursor:pointer;transition:all .2s}
         .src-opt:hover{border-color:var(--text3)}.src-opt.on{border-color:var(--accent);background:var(--accent-dark)}
         .src-opt i{font-size:20px;display:block;margin-bottom:2px;color:var(--accent)}.src-opt span{font-size:10px;font-weight:600}
-
         .admin-login{position:fixed;inset:0;background:var(--bg);z-index:3000;display:none;align-items:center;justify-content:center}
         .admin-login.show{display:flex}
         .login-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:32px;width:340px;text-align:center}
         .login-card .logo{justify-content:center;margin-bottom:20px}.login-card h3{font-size:16px;font-weight:700;margin-bottom:4px}
         .login-card p{font-size:12px;color:var(--text3);margin-bottom:20px}.login-card .field{text-align:left}
-
         .admin-panel{display:none}.admin-panel.show{display:block}
         .admin-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px}
         .admin-head h1{font-size:20px;font-weight:800}
@@ -120,7 +106,6 @@
         .a-tab{padding:8px 14px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;color:var(--text2);font-family:'Inter',sans-serif;background:none;border:none;white-space:nowrap;transition:all .15s}
         .a-tab:hover{color:var(--text)}.a-tab.on{background:var(--accent);color:var(--bg)}
         .a-section{display:none}.a-section.on{display:block}
-
         .a-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px}
         .a-card-head{padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:8px}
         .a-card-head h3{font-size:14px;font-weight:700}
@@ -136,43 +121,33 @@
         .act-del{background:rgba(229,9,20,.12);color:#e50914}.act-del:hover{background:#e50914;color:#fff}
         .act-copy{background:rgba(34,197,94,.12);color:#22c55e}.act-copy:hover{background:#22c55e;color:#fff}
         .act-edit{background:rgba(59,130,246,.12);color:#3b82f6}.act-edit:hover{background:#3b82f6;color:#fff}
-
         .empty{text-align:center;padding:40px 20px;color:var(--text3)}.empty i{font-size:40px;margin-bottom:12px;opacity:.3}.empty h3{font-size:14px;color:var(--text2);margin-bottom:4px}.empty p{font-size:12px}
-
         .toast-wrap{position:fixed;bottom:16px;right:16px;z-index:5000;display:flex;flex-direction:column;gap:6px}
         .toast{padding:10px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:500;display:flex;align-items:center;gap:8px;animation:slideIn .25s ease;box-shadow:0 4px 16px rgba(0,0,0,.4)}
         .toast.ok{border-left:3px solid #22c55e}.toast.err{border-left:3px solid #e50914}.toast.inf{border-left:3px solid #3b82f6}
         @keyframes slideIn{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
-
         .stats-row{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
         .stat{flex:1;min-width:100px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center}
         .stat .val{font-size:22px;font-weight:800;color:var(--accent)}.stat .lbl{font-size:10px;color:var(--text3);margin-top:2px}
         .table-wrap{overflow-x:auto}
-
         .drive-help{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:16px}
         .drive-help h4{font-size:12px;font-weight:700;color:var(--accent);margin-bottom:8px;display:flex;align-items:center;gap:6px}
         .drive-help ol{padding-left:18px;font-size:11px;color:var(--text2);line-height:1.8}
-
         .themes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;padding:16px}
         .theme-card{background:var(--bg3);border:2px solid var(--border);border-radius:10px;padding:16px;text-align:center;cursor:pointer;transition:all .2s}
         .theme-card:hover{border-color:var(--text3)}.theme-card.on{border-color:var(--accent)}
         .theme-card .dot{width:36px;height:36px;border-radius:50%;margin:0 auto 8px}
         .theme-card .name{font-size:12px;font-weight:700}.theme-card .sub{font-size:9px;color:var(--text3);font-family:monospace;margin-top:2px}
         .theme-card .check{margin-top:6px;font-size:10px;color:var(--accent);font-weight:600}
-
         .settings-preview{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:16px;margin-top:12px;text-align:center}
         .settings-preview .preview-text{font-size:18px;font-weight:800;margin-bottom:4px}
         .settings-preview .preview-text em{color:var(--accent);font-style:normal}
-
         .current-name-display{background:var(--accent-dark);border:1px solid var(--accent);border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:13px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:8px}
-
+        .sync-status-bar{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
         .sync-setup{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:16px;margin-top:12px}
         .sync-setup h4{font-size:13px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
         .sync-setup .step{font-size:11px;color:var(--text2);margin-bottom:8px;padding-left:8px;border-left:2px solid var(--accent)}
         .sync-setup a{color:var(--accent);text-decoration:underline}
-
-        .sync-status-bar{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-
         @media(max-width:900px){.reader-layout{grid-template-columns:1fr}}
         @media(max-width:600px){.grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}.header{padding:0 12px}.main{padding:14px}.a-table .title-cell{max-width:120px}}
     </style>
@@ -181,7 +156,7 @@
 <header class="header">
     <div class="logo" onclick="goHome()"><div class="logo-box"><i class="fas fa-book-open"></i></div><span id="header-site-name">Livro do <em class="site-name">Gui</em></span></div>
     <div class="header-actions">
-        <div id="sync-badge" class="sync-indicator sync-off"><span class="sync-dot"></span> Offline</div>
+        <div id="sync-badge" class="sync-indicator sync-load" onclick="syncFromCloud()" title="Clique para sincronizar"><span class="sync-dot"></span> Conectando...</div>
         <div class="theme-selector">
             <button class="theme-btn" onclick="event.stopPropagation();document.getElementById('theme-dropdown').classList.toggle('show')" title="Temas"><i class="fas fa-palette"></i></button>
             <div class="theme-dropdown" id="theme-dropdown"></div>
@@ -205,7 +180,6 @@
         <div class="grid" id="grid"></div>
         <div class="empty" id="empty" style="display:none"><i class="fas fa-book-open"></i><h3>Nenhum livro</h3><p>Acesse o Admin para adicionar livros.</p></div>
     </div>
-
     <div class="reader-wrap" id="reader-view">
         <button class="back-btn" onclick="goHome()"><i class="fas fa-arrow-left"></i> Voltar</button>
         <div class="reader-head">
@@ -227,13 +201,12 @@
             <div><h3 style="font-size:14px;font-weight:700;margin-bottom:10px">Relacionados</h3><div id="related"></div></div>
         </div>
     </div>
-
     <div class="admin-panel" id="admin-panel">
         <button class="back-btn" onclick="goHome()"><i class="fas fa-arrow-left"></i> Voltar</button>
         <div class="admin-head"><h1><i class="fas fa-shield-halved" style="color:var(--accent);margin-right:8px"></i>Painel Admin</h1>
             <div style="display:flex;gap:6px">
-                <button class="btn btn-ghost btn-sm" onclick="syncToCloud()" id="btn-sync" title="Sincronizar com a nuvem"><i class="fas fa-cloud-arrow-up"></i> Sync</button>
-                <button class="btn btn-ghost btn-sm" onclick="syncFromCloud()" title="Baixar da nuvem"><i class="fas fa-cloud-arrow-down"></i></button>
+                <button class="btn btn-ghost btn-sm" onclick="syncToCloud()" title="Enviar para nuvem"><i class="fas fa-cloud-arrow-up"></i> Enviar</button>
+                <button class="btn btn-ghost btn-sm" onclick="syncFromCloud()" title="Baixar da nuvem"><i class="fas fa-cloud-arrow-down"></i> Baixar</button>
             </div>
         </div>
         <div class="stats-row" id="admin-stats"></div>
@@ -244,16 +217,12 @@
             <button class="a-tab" onclick="aTab('settings',this)">Configurações</button>
             <button class="a-tab" onclick="aTab('themes',this)">Temas</button>
         </div>
-
-        <!-- LIVROS -->
         <div class="a-section on" id="sec-books">
             <div class="a-card"><div class="a-card-head"><h3>📚 Todos os Livros</h3>
                 <input type="text" placeholder="Buscar..." style="width:180px;padding:6px 10px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:11px;font-family:'Inter',sans-serif;outline:none" oninput="aSearch(this.value)"></div>
                 <div class="table-wrap"><table class="a-table"><thead><tr><th>Título</th><th>Autor</th><th>Formato</th><th>Categoria</th><th style="width:110px">Ações</th></tr></thead><tbody id="tbody"></tbody></table></div>
             </div>
         </div>
-
-        <!-- ADICIONAR -->
         <div class="a-section" id="sec-add">
             <div class="a-card"><div class="a-card-head"><h3>➕ Adicionar Livro</h3></div>
                 <div style="padding:16px">
@@ -263,146 +232,82 @@
                         <div class="src-opt" data-s="epub" onclick="pickSrc(this)"><i class="fas fa-book"></i><span>EPUB</span></div>
                         <div class="src-opt" data-s="url" onclick="pickSrc(this)"><i class="fas fa-link"></i><span>URL</span></div>
                     </div>
-                    <div class="drive-help" id="drive-help" style="display:none">
-                        <h4><i class="fab fa-google-drive"></i> Como usar Google Drive</h4>
-                        <ol><li>Upload do PDF no Google Drive</li><li>Clique direito → <strong>Compartilhar</strong></li><li>Mude para <strong>"Qualquer pessoa com o link"</strong></li><li>Copie o link e cole abaixo</li></ol>
-                    </div>
+                    <div class="drive-help" id="drive-help" style="display:none"><h4><i class="fab fa-google-drive"></i> Como usar Google Drive</h4><ol><li>Upload do PDF no Drive</li><li>Clique direito → <strong>Compartilhar</strong></li><li>Mude para <strong>"Qualquer pessoa"</strong></li><li>Copie o link</li></ol></div>
                     <div class="field"><label>Título *</label><input type="text" id="bk-title" placeholder="Nome do livro"></div>
                     <div class="field"><label>Autor *</label><input type="text" id="bk-author" placeholder="Nome do autor"></div>
                     <div class="field"><label>URL do Arquivo *</label><input type="text" id="bk-url" placeholder="https://drive.google.com/file/d/..."><div class="hint" id="bk-hint">Link direto para PDF</div></div>
-                    <div class="field"><label>URL da Capa (opcional)</label><input type="text" id="bk-cover" placeholder="https://exemplo.com/capa.jpg"></div>
+                    <div class="field"><label>URL da Capa</label><input type="text" id="bk-cover" placeholder="https://exemplo.com/capa.jpg"></div>
                     <div class="field"><label>Categoria</label><select id="bk-cat"><option value="geral">Geral</option><option value="ficcao">Ficção</option><option value="nao-ficcao">Não-Ficção</option><option value="hq-manga">HQ / Manga</option><option value="tecnico">Técnico</option><option value="romance">Romance</option><option value="terror">Terror</option></select></div>
                     <button class="btn btn-accent btn-sm" onclick="addBookAdmin()"><i class="fas fa-plus"></i> Adicionar</button>
                 </div>
             </div>
         </div>
-
-        <!-- NUVEM (JSONBin) -->
         <div class="a-section" id="sec-cloud">
-            <div class="a-card">
-                <div class="a-card-head"><h3><i class="fas fa-cloud" style="color:var(--accent);margin-right:8px"></i> Sincronização na Nuvem</h3></div>
+            <div class="a-card"><div class="a-card-head"><h3><i class="fas fa-cloud" style="color:var(--accent);margin-right:8px"></i> Nuvem (Já Configurada)</h3></div>
                 <div style="padding:16px">
-                    <div class="sync-status-bar" id="sync-status-bar">
-                        <div style="display:flex;align-items:center;gap:8px">
-                            <i class="fas fa-cloud" style="font-size:20px;color:var(--text3)"></i>
-                            <div>
-                                <div style="font-size:13px;font-weight:700" id="sync-status-text">Sincronização não configurada</div>
-                                <div style="font-size:10px;color:var(--text3)">Configure abaixo para salvar seus livros na nuvem</div>
-                            </div>
-                        </div>
-                        <div id="sync-status-badge" class="sync-indicator sync-off"><span class="sync-dot"></span> Offline</div>
+                    <div class="sync-status-bar">
+                        <div style="display:flex;align-items:center;gap:8px"><i class="fas fa-cloud" style="font-size:20px;color:var(--accent)"></i><div><div style="font-size:13px;font-weight:700">Bin ID: <span style="font-family:monospace;color:var(--accent)">6a170fad8ef04f453821c8c1</span></div><div style="font-size:10px;color:var(--text3)">Configurado automaticamente</div></div></div>
+                        <div id="sync-status-badge" class="sync-indicator sync-load"><span class="sync-dot"></span> Conectando...</div>
                     </div>
-
-                    <div class="sync-setup">
-                        <h4><i class="fas fa-list-ol"></i> Como configurar (grátis)</h4>
-                        <div class="step">1. Acesse <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> e crie uma conta gratuita</div>
-                        <div class="step">2. Vá em <strong>API Keys</strong> e copie sua chave (X-Master-Key)</div>
-                        <div class="step">3. Crie um novo Bin e copie o <strong>Bin ID</strong></div>
-                        <div class="step">4. Cole ambos nos campos abaixo e clique em "Salvar e Conectar"</div>
-                    </div>
-
-                    <div style="margin-top:16px">
-                        <div class="field"><label>API Key (X-Master-Key)</label><input type="text" id="cloud-api-key" placeholder="$2a$10$..."></div>
-                        <div class="field"><label>Bin ID</label><input type="text" id="cloud-bin-id" placeholder="6xxxxxxxxxxxxxxxxxxxxx"></div>
-                        <div style="display:flex;gap:8px;flex-wrap:wrap">
-                            <button class="btn btn-accent btn-sm" onclick="saveCloudConfig()"><i class="fas fa-save"></i> Salvar e Conectar</button>
-                            <button class="btn btn-green btn-sm" onclick="syncToCloud()"><i class="fas fa-cloud-arrow-up"></i> Enviar para Nuvem</button>
-                            <button class="btn btn-ghost btn-sm" onclick="syncFromCloud()"><i class="fas fa-cloud-arrow-down"></i> Baixar da Nuvem</button>
-                            <button class="btn btn-ghost btn-sm" onclick="clearCloudConfig()" style="color:var(--accent)"><i class="fas fa-unlink"></i> Desconectar</button>
-                        </div>
+                    <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+                        <button class="btn btn-accent btn-sm" onclick="syncToCloud()"><i class="fas fa-cloud-arrow-up"></i> Enviar Dados</button>
+                        <button class="btn btn-ghost btn-sm" onclick="syncFromCloud()"><i class="fas fa-cloud-arrow-down"></i> Baixar Dados</button>
+                        <button class="btn btn-ghost btn-sm" onclick="exportData()"><i class="fas fa-file-export"></i> Exportar Backup</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- CONFIGURAÇÕES -->
         <div class="a-section" id="sec-settings">
-            <div class="a-card">
-                <div class="a-card-head"><h3><i class="fas fa-cog" style="color:var(--accent);margin-right:8px"></i> Nome da Plataforma</h3></div>
+            <div class="a-card"><div class="a-card-head"><h3><i class="fas fa-cog" style="color:var(--accent);margin-right:8px"></i> Nome da Plataforma</h3></div>
                 <div style="padding:16px">
                     <div class="current-name-display"><i class="fas fa-tag"></i> Nome atual: <span id="current-name-label">Livro do Gui</span></div>
-                    <div class="field"><label>Nome completo da plataforma</label><input type="text" id="site-name-input" placeholder="Ex: Biblioteca do Pedro"></div>
-                    <div style="display:flex;gap:8px">
-                        <button class="btn btn-accent btn-sm" onclick="saveSiteName()"><i class="fas fa-save"></i> Salvar</button>
-                        <button class="btn btn-ghost btn-sm" onclick="resetSiteName()"><i class="fas fa-undo"></i> Padrão</button>
-                    </div>
+                    <div class="field"><label>Nome da plataforma</label><input type="text" id="site-name-input" placeholder="Ex: Biblioteca do Pedro"></div>
+                    <div style="display:flex;gap:8px"><button class="btn btn-accent btn-sm" onclick="saveSiteName()"><i class="fas fa-save"></i> Salvar</button><button class="btn btn-ghost btn-sm" onclick="resetSiteName()"><i class="fas fa-undo"></i> Padrão</button></div>
                     <div class="settings-preview"><div style="font-size:10px;color:var(--text3);margin-bottom:8px">PRÉ-VISUALIZAÇÃO</div><div class="preview-text" id="preview-name">Livro do <em>Gui</em></div></div>
                 </div>
             </div>
         </div>
-
-        <!-- TEMAS -->
         <div class="a-section" id="sec-themes">
-            <div class="a-card"><div class="a-card-head"><h3><i class="fas fa-palette" style="color:var(--accent);margin-right:8px"></i> Temas</h3></div>
-                <div class="themes-grid" id="themes-grid"></div>
-            </div>
+            <div class="a-card"><div class="a-card-head"><h3><i class="fas fa-palette" style="color:var(--accent);margin-right:8px"></i> Temas</h3></div><div class="themes-grid" id="themes-grid"></div></div>
         </div>
     </div>
 </main>
 
-<!-- MODAL EDITAR -->
-<div class="overlay" id="modal-edit">
-    <div class="modal">
-        <div class="modal-head"><h2><i class="fas fa-pen-to-square" style="color:var(--accent);margin-right:8px"></i>Editar Livro</h2><button class="modal-x" onclick="closeModal('modal-edit')"><i class="fas fa-times"></i></button></div>
-        <div class="modal-body">
-            <input type="hidden" id="edit-id">
-            <div class="field"><label>Título</label><input type="text" id="edit-title"></div>
-            <div class="field"><label>Autor</label><input type="text" id="edit-author"></div>
-            <div class="field"><label>URL</label><input type="text" id="edit-url"></div>
-            <div class="field"><label>Capa</label><input type="text" id="edit-cover"></div>
-            <div class="field"><label>Categoria</label><select id="edit-cat"><option value="geral">Geral</option><option value="ficcao">Ficção</option><option value="nao-ficcao">Não-Ficção</option><option value="hq-manga">HQ / Manga</option><option value="tecnico">Técnico</option><option value="romance">Romance</option><option value="terror">Terror</option></select></div>
-        </div>
-        <div class="modal-foot"><button class="btn btn-ghost" onclick="closeModal('modal-edit')">Cancelar</button><button class="btn btn-accent" onclick="saveEdit()"><i class="fas fa-save"></i> Salvar</button></div>
-    </div>
-</div>
-
-<!-- MODAL ADICIONAR -->
-<div class="overlay" id="modal-add">
-    <div class="modal">
-        <div class="modal-head"><h2>Adicionar Livro</h2><button class="modal-x" onclick="closeModal('modal-add')"><i class="fas fa-times"></i></button></div>
-        <div class="modal-body">
-            <div class="src-opts"><div class="src-opt on" onclick="pickUserSrc(this,'pdf')"><i class="fas fa-file-pdf"></i><span>PDF</span></div><div class="src-opt" onclick="pickUserSrc(this,'drive')"><i class="fab fa-google-drive"></i><span>Drive</span></div><div class="src-opt" onclick="pickUserSrc(this,'epub')"><i class="fas fa-book"></i><span>EPUB</span></div><div class="src-opt" onclick="pickUserSrc(this,'url')"><i class="fas fa-link"></i><span>URL</span></div></div>
-            <div class="field"><label>Título</label><input type="text" id="uv-title"></div>
-            <div class="field"><label>Autor</label><input type="text" id="uv-author"></div>
-            <div class="field"><label>URL</label><input type="text" id="uv-url" placeholder="https://drive.google.com/file/d/..."><div class="hint" id="uv-hint">Link do arquivo</div></div>
-            <div class="field"><label>Capa (opcional)</label><input type="text" id="uv-cover"></div>
-            <div class="field"><label>Categoria</label><select id="uv-cat"><option value="geral">Geral</option><option value="ficcao">Ficção</option><option value="nao-ficcao">Não-Ficção</option><option value="hq-manga">HQ / Manga</option><option value="tecnico">Técnico</option><option value="romance">Romance</option><option value="terror">Terror</option></select></div>
-        </div>
-        <div class="modal-foot"><button class="btn btn-ghost" onclick="closeModal('modal-add')">Cancelar</button><button class="btn btn-accent" onclick="addBookUser()"><i class="fas fa-plus"></i> Adicionar</button></div>
-    </div>
-</div>
-
-<!-- LOGIN -->
-<div class="admin-login" id="admin-login"><div class="login-card">
-    <div class="logo"><div class="logo-box"><i class="fas fa-shield-halved"></i></div><span id="login-site-name">Livro do <em class="site-name">Gui</em></span></div>
-    <h3>Painel Admin</h3><p>Senha para acessar</p>
-    <div class="field"><label>Senha</label><input type="password" id="admin-pass" placeholder="••••••" onkeydown="if(event.key==='Enter')checkAdmin()"></div>
-    <button class="btn btn-purple" onclick="checkAdmin()" style="width:100%;justify-content:center;margin-top:8px"><i class="fas fa-lock-open"></i> Entrar</button>
-    <button class="btn btn-ghost" onclick="closeAdminLogin()" style="width:100%;justify-content:center;margin-top:6px">Cancelar</button>
+<div class="overlay" id="modal-edit"><div class="modal"><div class="modal-head"><h2><i class="fas fa-pen-to-square" style="color:var(--accent);margin-right:8px"></i>Editar Livro</h2><button class="modal-x" onclick="closeModal('modal-edit')"><i class="fas fa-times"></i></button></div>
+    <div class="modal-body"><input type="hidden" id="edit-id"><div class="field"><label>Título</label><input type="text" id="edit-title"></div><div class="field"><label>Autor</label><input type="text" id="edit-author"></div><div class="field"><label>URL</label><input type="text" id="edit-url"></div><div class="field"><label>Capa</label><input type="text" id="edit-cover"></div><div class="field"><label>Categoria</label><select id="edit-cat"><option value="geral">Geral</option><option value="ficcao">Ficção</option><option value="nao-ficcao">Não-Ficção</option><option value="hq-manga">HQ / Manga</option><option value="tecnico">Técnico</option><option value="romance">Romance</option><option value="terror">Terror</option></select></div></div>
+    <div class="modal-foot"><button class="btn btn-ghost" onclick="closeModal('modal-edit')">Cancelar</button><button class="btn btn-accent" onclick="saveEdit()"><i class="fas fa-save"></i> Salvar</button></div>
 </div></div>
 
+<div class="overlay" id="modal-add"><div class="modal"><div class="modal-head"><h2>Adicionar Livro</h2><button class="modal-x" onclick="closeModal('modal-add')"><i class="fas fa-times"></i></button></div>
+    <div class="modal-body"><div class="src-opts"><div class="src-opt on" onclick="pickUserSrc(this,'pdf')"><i class="fas fa-file-pdf"></i><span>PDF</span></div><div class="src-opt" onclick="pickUserSrc(this,'drive')"><i class="fab fa-google-drive"></i><span>Drive</span></div><div class="src-opt" onclick="pickUserSrc(this,'epub')"><i class="fas fa-book"></i><span>EPUB</span></div><div class="src-opt" onclick="pickUserSrc(this,'url')"><i class="fas fa-link"></i><span>URL</span></div></div>
+    <div class="field"><label>Título</label><input type="text" id="uv-title"></div><div class="field"><label>Autor</label><input type="text" id="uv-author"></div><div class="field"><label>URL</label><input type="text" id="uv-url"><div class="hint" id="uv-hint">Link do arquivo</div></div><div class="field"><label>Capa</label><input type="text" id="uv-cover"></div><div class="field"><label>Categoria</label><select id="uv-cat"><option value="geral">Geral</option><option value="ficcao">Ficção</option><option value="nao-ficcao">Não-Ficção</option><option value="hq-manga">HQ / Manga</option><option value="tecnico">Técnico</option><option value="romance">Romance</option><option value="terror">Terror</option></select></div></div>
+    <div class="modal-foot"><button class="btn btn-ghost" onclick="closeModal('modal-add')">Cancelar</button><button class="btn btn-accent" onclick="addBookUser()"><i class="fas fa-plus"></i> Adicionar</button></div>
+</div></div>
+
+<div class="admin-login" id="admin-login"><div class="login-card"><div class="logo"><div class="logo-box"><i class="fas fa-shield-halved"></i></div><span id="login-site-name">Livro do <em class="site-name">Gui</em></span></div><h3>Painel Admin</h3><p>Senha para acessar</p><div class="field"><label>Senha</label><input type="password" id="admin-pass" placeholder="••••••" onkeydown="if(event.key==='Enter')checkAdmin()"></div><button class="btn btn-purple" onclick="checkAdmin()" style="width:100%;justify-content:center;margin-top:8px"><i class="fas fa-lock-open"></i> Entrar</button><button class="btn btn-ghost" onclick="closeAdminLogin()" style="width:100%;justify-content:center;margin-top:6px">Cancelar</button></div></div>
 <div class="toast-wrap" id="toasts"></div>
 
 <script>
 const ADMIN_PASS='admin123';
-const THEMES={default:{name:'Padrão',accent:'#eab308'},ocean:{name:'Oceano',accent:'#06b6d4'},vampire:{name:'Vampire',accent:'#e50914'},forest:{name:'Floresta',accent:'#22c55e'},purple:{name:'Roxo',accent:'#a855f7'},sunset:{name:'Sunset',accent:'#f97316'},mono:{name:'Mono',accent:'#e5e5e5'}};
+// CONFIGURAÇÃO DA NUVEM JÁ INCLUÍDA
+const CLOUD_BIN='6a170fad8ef04f453821c8c1';
+const CLOUD_KEY='$2a$10$ISDOMV9DYyZR2Z.NtmCMe.4y94QeMrK.L1ycOmt.GfmENetdlfyyC';
 
+const THEMES={default:{name:'Padrão',accent:'#eab308'},ocean:{name:'Oceano',accent:'#06b6d4'},vampire:{name:'Vampire',accent:'#e50914'},forest:{name:'Floresta',accent:'#22c55e'},purple:{name:'Roxo',accent:'#a855f7'},sunset:{name:'Sunset',accent:'#f97316'},mono:{name:'Mono',accent:'#e5e5e5'}};
 let books=JSON.parse(localStorage.getItem('bd_books')||'[]');
 let favs=JSON.parse(localStorage.getItem('bd_favs')||'[]');
 let siteName=localStorage.getItem('bd_sitename')||'Livro do Gui';
 let curCat='all',userSrc='pdf',adminSrc='pdf',curRead=null,vSearch='';
 let pdfDoc=null,pdfPage=1;
 let curTheme=localStorage.getItem('bd_theme')||'default';
-let cloudKey=localStorage.getItem('bd_cloud_key')||'';
-let cloudBin=localStorage.getItem('bd_cloud_bin')||'';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
 document.addEventListener('DOMContentLoaded',()=>{
-    setTheme(curTheme);updateSiteNameUI();updateCloudUI();render();renderThemeDD();renderThemeGrid();
+    setTheme(curTheme);updateSiteNameUI();updateCloudBadge();render();renderThemeDD();renderThemeGrid();
     document.addEventListener('click',e=>{const dd=document.getElementById('theme-dropdown');if(dd&&dd.classList.contains('show')&&!e.target.closest('.theme-selector'))dd.classList.remove('show')});
-    // Auto-sync on load if cloud is configured
-    if(cloudKey&&cloudBin)syncFromCloud(true);
+    // Auto-sync ao abrir
+    setTimeout(()=>syncFromCloud(true), 1500);
 });
 
 function gid(){return'x'+Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
@@ -412,85 +317,47 @@ function renderThemeGrid(){const g=document.getElementById('themes-grid');if(!g)
 function driveId(url){const m=url.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);return m?m[1]:null}
 function drivePrev(url){const id=driveId(url);return id?`https://drive.google.com/file/d/${id}/preview`:url}
 
-// ===== CLOUD SYNC =====
-function updateCloudUI(){
+// ===== NUVEM =====
+function updateCloudBadge(){
     const badge=document.getElementById('sync-badge');
-    const statusText=document.getElementById('sync-status-text');
-    const statusBadge=document.getElementById('sync-status-badge');
-    if(cloudKey&&cloudBin){
-        badge.className='sync-indicator sync-ok';badge.innerHTML='<span class="sync-dot"></span> Cloud';
-        statusText.textContent='Conectado à nuvem';
-        statusBadge.className='sync-indicator sync-ok';statusBadge.innerHTML='<span class="sync-dot"></span> Conectado';
-    }else{
-        badge.className='sync-indicator sync-off';badge.innerHTML='<span class="sync-dot"></span> Offline';
-        statusText.textContent='Sincronização não configurada';
-        statusBadge.className='sync-indicator sync-off';statusBadge.innerHTML='<span class="sync-dot"></span> Offline';
-    }
-    document.getElementById('cloud-api-key').value=cloudKey;
-    document.getElementById('cloud-bin-id').value=cloudBin;
-}
-
-function saveCloudConfig(){
-    const key=document.getElementById('cloud-api-key').value.trim();
-    const bin=document.getElementById('cloud-bin-id').value.trim();
-    if(!key||!bin)return toast('Preencha API Key e Bin ID','err');
-    cloudKey=key;cloudBin=bin;
-    localStorage.setItem('bd_cloud_key',cloudKey);
-    localStorage.setItem('bd_cloud_bin',cloudBin);
-    updateCloudUI();
-    toast('Conectado! Enviando dados para nuvem...','ok');
-    syncToCloud();
-}
-
-function clearCloudConfig(){
-    if(!confirm('Desconectar da nuvem? Os dados locais serão mantidos.'))return;
-    cloudKey='';cloudBin='';
-    localStorage.removeItem('bd_cloud_key');localStorage.removeItem('bd_cloud_bin');
-    updateCloudUI();toast('Desconectado','inf');
+    const sBadge=document.getElementById('sync-status-badge');
+    if(badge){badge.className='sync-indicator sync-ok';badge.innerHTML='<span class="sync-dot"></span> Cloud';}
+    if(sBadge){sBadge.className='sync-indicator sync-ok';sBadge.innerHTML='<span class="sync-dot"></span> Conectado';}
 }
 
 async function syncToCloud(){
-    if(!cloudKey||!cloudBin)return toast('Configure a nuvem primeiro na aba ☁️ Nuvem','err');
     const badge=document.getElementById('sync-badge');
-    badge.className='sync-indicator sync-load';badge.innerHTML='<span class="sync-dot"></span> Enviando...';
+    if(badge){badge.className='sync-indicator sync-load';badge.innerHTML='<span class="sync-dot"></span> Enviando...'}
     try{
         const data={books,favs,siteName,theme:curTheme,syncedAt:new Date().toISOString()};
-        const res=await fetch(`https://api.jsonbin.io/v3/b/${cloudBin}`,{
-            method:'PUT',
-            headers:{'Content-Type':'application/json','X-Master-Key':cloudKey},
-            body:JSON.stringify(data)
+        const res=await fetch(`https://api.jsonbin.io/v3/b/${CLOUD_BIN}`,{
+            method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':CLOUD_KEY},body:JSON.stringify(data)
         });
-        if(!res.ok)throw new Error(`HTTP ${res.status}`);
-        badge.className='sync-indicator sync-ok';badge.innerHTML='<span class="sync-dot"></span> Cloud';
-        toast('✅ Dados enviados para a nuvem!','ok');
-    }catch(e){
-        badge.className='sync-indicator sync-off';badge.innerHTML='<span class="sync-dot"></span> Erro';
-        toast('Erro ao enviar: '+e.message,'err');
-    }
+        if(!res.ok)throw new Error(`Erro ${res.status}`);
+        updateCloudBadge();toast('✅ Enviado para nuvem!','ok');
+    }catch(e){toast('Erro ao enviar: '+e.message,'err')}
 }
 
 async function syncFromCloud(silent=false){
-    if(!cloudKey||!cloudBin){if(!silent)toast('Configure a nuvem primeiro','err');return}
-    const badge=document.getElementById('sync-badge');
-    if(!silent){badge.className='sync-indicator sync-load';badge.innerHTML='<span class="sync-dot"></span> Baixando...'}
+    if(!silent){const b=document.getElementById('sync-badge');if(b){b.className='sync-indicator sync-load';b.innerHTML='<span class="sync-dot"></span> Baixando...'}}
     try{
-        const res=await fetch(`https://api.jsonbin.io/v3/b/${cloudBin}/latest`,{
-            headers:{'X-Master-Key':cloudKey}
-        });
-        if(!res.ok)throw new Error(`HTTP ${res.status}`);
+        const res=await fetch(`https://api.jsonbin.io/v3/b/${CLOUD_BIN}/latest`,{headers:{'X-Master-Key':CLOUD_KEY}});
+        if(!res.ok)throw new Error(`Erro ${res.status}`);
         const json=await res.json();
-        const data=json.record;
-        if(data.books){books=data.books;saveB()}
-        if(data.favs){favs=data.favs;saveF()}
-        if(data.siteName){siteName=data.siteName;localStorage.setItem('bd_sitename',siteName);updateSiteNameUI()}
-        if(data.theme){setTheme(data.theme)}
+        const d=json.record;
+        let changed=false;
+        if(d.books){
+            if(JSON.stringify(d.books)!==JSON.stringify(books)){books=d.books;changed=true}
+            saveB()
+        }
+        if(d.favs){favs=d.favs;saveF()}
+        if(d.siteName){siteName=d.siteName;localStorage.setItem('bd_sitename',siteName);updateSiteNameUI()}
+        if(d.theme){setTheme(d.theme)}
         render();
         if(!silent)toast('✅ Dados baixados da nuvem!','ok');
-        else if(books.length)toast('Dados sincronizados da nuvem','inf');
-        badge.className='sync-indicator sync-ok';badge.innerHTML='<span class="sync-dot"></span> Cloud';
+        updateCloudBadge();
     }catch(e){
         if(!silent)toast('Erro ao baixar: '+e.message,'err');
-        badge.className='sync-indicator sync-off';badge.innerHTML='<span class="sync-dot"></span> Offline';
     }
 }
 
@@ -503,12 +370,11 @@ function updateSiteNameUI(){
     document.getElementById('site-name-input').value=siteName;
     document.getElementById('preview-name').innerHTML=siteName;
 }
-function saveSiteName(){const n=document.getElementById('site-name-input').value.trim();if(!n)return toast('Digite um nome','err');siteName=n;localStorage.setItem('bd_sitename',siteName);updateSiteNameUI();toast('Nome atualizado!','ok')}
-function resetSiteName(){siteName='Livro do Gui';localStorage.setItem('bd_sitename',siteName);document.getElementById('site-name-input').value=siteName;updateSiteNameUI();toast('Nome restaurado','inf')}
+function saveSiteName(){const n=document.getElementById('site-name-input').value.trim();if(!n)return toast('Digite um nome','err');siteName=n;localStorage.setItem('bd_sitename',siteName);updateSiteNameUI();toast('Nome atualizado!','ok');syncToCloud()}
+function resetSiteName(){siteName='Livro do Gui';localStorage.setItem('bd_sitename',siteName);document.getElementById('site-name-input').value=siteName;updateSiteNameUI();toast('Restaurado','inf');syncToCloud()}
 
 function goHome(){document.getElementById('home-view').style.display='';document.getElementById('reader-view').classList.remove('show');document.getElementById('admin-panel').classList.remove('show');curRead=null;pdfDoc=null}
 function filter(c,el){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');curCat=c;renderGrid()}
-
 function render(){renderGrid();renderAdmin()}
 
 function renderGrid(){
@@ -541,83 +407,60 @@ async function loadPDF(url){
 function renderPDF(){if(!pdfDoc)return;const body=document.getElementById('reader-body');pdfDoc.getPage(pdfPage).then(page=>{const vp=page.getViewport({scale:1.5}),c=document.createElement('canvas');c.width=vp.width;c.height=vp.height;c.style.maxWidth='100%';c.style.height='auto';body.innerHTML='';body.appendChild(c);page.render({canvasContext:c.getContext('2d'),viewport:vp});document.getElementById('reader-page').textContent=`Página ${pdfPage} de ${pdfDoc.numPages}`})}
 function prevPage(){if(pdfPage>1){pdfPage--;renderPDF()}}
 function nextPage(){if(pdfDoc&&pdfPage<pdfDoc.numPages){pdfPage++;renderPDF()}}
-
 function toggleFav(){if(!curRead)return;const i=favs.indexOf(curRead);if(i>-1){favs.splice(i,1);toast('Removido','inf')}else{favs.push(curRead);toast('Favoritado!','ok')}saveF();const isFav=favs.includes(curRead);document.getElementById('fav-icon').className=isFav?'fas fa-heart':'far fa-heart';document.getElementById('fav-icon').style.color=isFav?'var(--accent)':''}
 function copyBookUrl(){const b=books.find(x=>x.id===curRead);if(b)navigator.clipboard.writeText(b.url).then(()=>toast('Copiado!','ok'))}
 
 function addBookUser(){
     const t=document.getElementById('uv-title').value.trim(),a=document.getElementById('uv-author').value.trim(),u=document.getElementById('uv-url').value.trim(),c=document.getElementById('uv-cover').value.trim(),cat=document.getElementById('uv-cat').value;
-    if(!u)return toast('Insira a URL','err');
-    if(userSrc==='drive'&&!driveId(u))return toast('Link do Drive inválido','err');
+    if(!u)return toast('Insira a URL','err');if(userSrc==='drive'&&!driveId(u))return toast('Link do Drive inválido','err');
     books.unshift({id:gid(),url:u,title:t||'Sem título',author:a||'Desconhecido',source:userSrc,category:cat,cover:c,addedAt:Date.now()});
-    saveB();render();closeModal('modal-add');['uv-title','uv-author','uv-url','uv-cover'].forEach(id=>document.getElementById(id).value='');toast('Adicionado!','ok');
-    if(cloudKey&&cloudBin)syncToCloud()}
+    saveB();render();closeModal('modal-add');['uv-title','uv-author','uv-url','uv-cover'].forEach(id=>document.getElementById(id).value='');toast('Adicionado!','ok');syncToCloud()}
 
 function pickUserSrc(el,s){el.parentElement.querySelectorAll('.src-opt').forEach(x=>x.classList.remove('on'));el.classList.add('on');userSrc=s}
-
 function addBookAdmin(){
     const t=document.getElementById('bk-title').value.trim(),a=document.getElementById('bk-author').value.trim(),u=document.getElementById('bk-url').value.trim(),c=document.getElementById('bk-cover').value.trim(),cat=document.getElementById('bk-cat').value;
-    if(!u)return toast('Insira a URL','err');if(!t)return toast('Insira o título','err');
-    if(adminSrc==='drive'&&!driveId(u))return toast('Link do Drive inválido','err');
+    if(!u||!t)return toast('Preencha título e URL','err');if(adminSrc==='drive'&&!driveId(u))return toast('Link do Drive inválido','err');
     books.unshift({id:gid(),url:u,title:t,author:a||'Desconhecido',source:adminSrc,category:cat,cover:c,addedAt:Date.now()});
-    saveB();render();['bk-title','bk-author','bk-url','bk-cover'].forEach(id=>document.getElementById(id).value='');toast('Adicionado!','ok');
-    if(cloudKey&&cloudBin)syncToCloud()}
+    saveB();render();['bk-title','bk-author','bk-url','bk-cover'].forEach(id=>document.getElementById(id).value='');toast('Adicionado!','ok');syncToCloud()}
 
 function pickSrc(el){el.parentElement.querySelectorAll('.src-opt').forEach(x=>x.classList.remove('on'));el.classList.add('on');adminSrc=el.dataset.s;
-document.getElementById('bk-hint').textContent={pdf:'Link direto para PDF',drive:'Link de compartilhamento do Google Drive',epub:'Link direto para EPUB',url:'URL qualquer'}[adminSrc];
+document.getElementById('bk-hint').textContent={pdf:'Link direto para PDF',drive:'Link de compartilhamento do Drive',epub:'Link direto para EPUB',url:'URL qualquer'}[adminSrc];
 document.getElementById('drive-help').style.display=adminSrc==='drive'?'':'none'}
 
 function editBook(id){
     const b=books.find(x=>x.id===id);if(!b)return;
-    document.getElementById('edit-id').value=id;
-    document.getElementById('edit-title').value=b.title||'';
-    document.getElementById('edit-author').value=b.author||'';
-    document.getElementById('edit-url').value=b.url||'';
-    document.getElementById('edit-cover').value=b.cover||'';
-    document.getElementById('edit-cat').value=b.category||'geral';
+    document.getElementById('edit-id').value=id;document.getElementById('edit-title').value=b.title||'';document.getElementById('edit-author').value=b.author||'';
+    document.getElementById('edit-url').value=b.url||'';document.getElementById('edit-cover').value=b.cover||'';document.getElementById('edit-cat').value=b.category||'geral';
     document.getElementById('modal-edit').classList.add('show');
 }
 
 function saveEdit(){
     const id=document.getElementById('edit-id').value;const b=books.find(x=>x.id===id);if(!b)return;
     const t=document.getElementById('edit-title').value.trim(),a=document.getElementById('edit-author').value.trim(),u=document.getElementById('edit-url').value.trim(),c=document.getElementById('edit-cover').value.trim(),cat=document.getElementById('edit-cat').value;
-    if(!t)return toast('Título é obrigatório','err');if(!u)return toast('URL é obrigatório','err');
-    b.title=t;b.author=a||'Desconhecido';b.url=u;b.cover=c;b.category=cat;
-    saveB();render();closeModal('modal-edit');toast('✅ Livro atualizado!','ok');
-    if(cloudKey&&cloudBin)syncToCloud();
-}
+    if(!t||!u)return toast('Título e URL obrigatórios','err');
+    b.title=t;b.author=a||'Desconhecido';b.url=u;b.cover=c;b.category=cat;saveB();render();closeModal('modal-edit');toast('Atualizado!','ok');syncToCloud()}
 
 function renderAdmin(){
-    document.getElementById('admin-stats').innerHTML=`
-        <div class="stat"><div class="val">${books.length}</div><div class="lbl">Livros</div></div>
-        <div class="stat"><div class="val">${books.filter(b=>b.source==='pdf').length}</div><div class="lbl">PDF</div></div>
-        <div class="stat"><div class="val">${books.filter(b=>b.source==='drive').length}</div><div class="lbl">Drive</div></div>
-        <div class="stat"><div class="val">${favs.length}</div><div class="lbl">Favoritos</div></div>`;
-
+    document.getElementById('admin-stats').innerHTML=`<div class="stat"><div class="val">${books.length}</div><div class="lbl">Livros</div></div><div class="stat"><div class="val">${books.filter(b=>b.source==='pdf').length}</div><div class="lbl">PDF</div></div><div class="stat"><div class="val">${books.filter(b=>b.source==='drive').length}</div><div class="lbl">Drive</div></div><div class="stat"><div class="val">${favs.length}</div><div class="lbl">Favoritos</div></div>`;
     let list=[...books];if(vSearch){const q=vSearch.toLowerCase();list=list.filter(b=>(b.title||'').toLowerCase().includes(q)||(b.author||'').toLowerCase().includes(q))}
     document.getElementById('tbody').innerHTML=list.length?list.map(b=>{
         const tag=b.source==='pdf'?'tag-pdf':b.source==='drive'?'tag-drive':b.source==='epub'?'tag-epub':'tag-url';
-        const sl=b.source==='drive'?'Drive':b.source.toUpperCase();
-        return`<tr><td class="title-cell"><span class="title-text">${b.title||'?'}</span></td><td style="color:var(--text2)">${b.author||'-'}</td><td><span class="tag ${tag}">${sl}</span></td><td>${b.category||'Geral'}</td><td><div style="display:flex;gap:4px"><button class="act-btn act-edit" onclick="editBook('${b.id}')" title="Editar"><i class="fas fa-pen"></i></button><button class="act-btn act-copy" onclick="navigator.clipboard.writeText('${b.url}');toast('URL copiada!','ok')" title="Copiar URL"><i class="fas fa-copy"></i></button><button class="act-btn act-del" onclick="delBook('${b.id}')" title="Excluir"><i class="fas fa-trash"></i></button></div></td></tr>`}).join(''):'<tr><td colspan="5" style="text-align:center;padding:30px;color:var(--text3)">Nenhum livro</td></tr>'}
+        return`<tr><td class="title-cell"><span class="title-text">${b.title||'?'}</span></td><td style="color:var(--text2)">${b.author||'-'}</td><td><span class="tag ${tag}">${b.source==='drive'?'Drive':b.source.toUpperCase()}</span></td><td>${b.category||'Geral'}</td><td><div style="display:flex;gap:4px"><button class="act-btn act-edit" onclick="editBook('${b.id}')"><i class="fas fa-pen"></i></button><button class="act-btn act-copy" onclick="navigator.clipboard.writeText('${b.url}');toast('Copiada!','ok')"><i class="fas fa-copy"></i></button><button class="act-btn act-del" onclick="delBook('${b.id}')"><i class="fas fa-trash"></i></button></div></td></tr>`}).join(''):'<tr><td colspan="5" style="text-align:center;padding:30px;color:var(--text3)">Nenhum livro</td></tr>'}
 
 function aTab(tab,el){document.querySelectorAll('.a-tab').forEach(t=>t.classList.remove('on'));document.querySelectorAll('.a-section').forEach(s=>s.classList.remove('on'));el.classList.add('on');document.getElementById('sec-'+tab).classList.add('on');if(tab==='themes')renderThemeGrid()}
 function aSearch(q){vSearch=q;renderAdmin()}
-
-function delBook(id){if(!id)return;if(!confirm('Excluir este livro?'))return;books=books.filter(b=>b.id!==id);favs=favs.filter(f=>f!==id);saveB();saveF();render();toast('Excluído','inf');if(curRead===id)goHome();if(cloudKey&&cloudBin)syncToCloud()}
+function delBook(id){if(!id)return;if(!confirm('Excluir?'))return;books=books.filter(b=>b.id!==id);favs=favs.filter(f=>f!==id);saveB();saveF();render();toast('Excluído','inf');if(curRead===id)goHome();syncToCloud()}
 
 function openAdminLogin(){document.getElementById('admin-login').classList.add('show');document.getElementById('admin-pass').value='';document.getElementById('admin-pass').focus();updateSiteNameUI()}
 function closeAdminLogin(){document.getElementById('admin-login').classList.remove('show')}
 function checkAdmin(){if(document.getElementById('admin-pass').value===ADMIN_PASS){closeAdminLogin();document.getElementById('home-view').style.display='none';document.getElementById('reader-view').classList.remove('show');document.getElementById('admin-panel').classList.add('show');renderAdmin()}else{toast('Senha incorreta','err')}}
 
-function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({books,favs,theme:curTheme,siteName,date:new Date().toISOString()},null,2)],{type:'application/json'}));a.download=`${siteName.replace(/\s/g,'-').toLowerCase()}-${Date.now()}.json`;a.click();toast('Exportado!','ok')}
-function importData(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(d.books){books=d.books;saveB()}if(d.favs){favs=d.favs;saveF()}if(d.theme)setTheme(d.theme);if(d.siteName){siteName=d.siteName;localStorage.setItem('bd_sitename',siteName);updateSiteNameUI()}render();toast('Importado!','ok');if(cloudKey&&cloudBin)syncToCloud()}catch{toast('Arquivo inválido','err')}};r.readAsText(f);e.target.value=''}
-
+function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({books,favs,theme:curTheme,siteName},null,2)],{type:'application/json'}));a.download=`backup-${Date.now()}.json`;a.click();toast('Exportado!','ok')}
 function closeModal(id){document.getElementById(id).classList.remove('show')}
 function saveB(){localStorage.setItem('bd_books',JSON.stringify(books))}
 function saveF(){localStorage.setItem('bd_favs',JSON.stringify(favs))}
 function toast(msg,type='inf'){const c=document.getElementById('toasts'),t=document.createElement('div');t.className=`toast ${type}`;const ic={ok:'fas fa-check-circle',err:'fas fa-exclamation-circle',inf:'fas fa-info-circle'},cl={ok:'#22c55e',err:'#e50914',inf:'#3b82f6'};t.innerHTML=`<i class="${ic[type]}" style="color:${cl[type]}"></i> ${msg}`;c.appendChild(t);setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(30px)';t.style.transition='all .3s';setTimeout(()=>t.remove(),300)},3500)}
-
-document.addEventListener('input',e=>{if(e.target.id==='site-name-input'){const v=e.target.value.trim()||'Nome da Plataforma';document.getElementById('preview-name').innerHTML=v}});
+document.addEventListener('input',e=>{if(e.target.id==='site-name-input'){document.getElementById('preview-name').innerHTML=e.target.value.trim()||'Nome'}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal('modal-add');closeModal('modal-edit');closeAdminLogin()}if(document.getElementById('reader-view').classList.contains('show')){if(e.key==='ArrowLeft')prevPage();if(e.key==='ArrowRight')nextPage()}});
 </script>
 </body>
